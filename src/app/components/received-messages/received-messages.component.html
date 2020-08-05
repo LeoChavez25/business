@@ -1,0 +1,98 @@
+<!-- <div class="messages-wrapper">
+    <mat-card class="content">
+        <mat-card-header>
+            <mat-card-title class="header">Received messages</mat-card-title>
+        </mat-card-header>
+        <br>
+        <form class="messages-form" [formGroup]="messageForm"><br>
+            <mat-card-content class="box">
+
+                <mat-form-field class="full-width">
+                    <label>Name:</label>
+                    <input matInput type="text" class="form-control" formControlName="name">
+                    <mat-error *ngIf="messageForm.controls.name.hasError('required')">
+                        This field is required
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <label>Email:</label>
+                    <input matInput type="email" class="form-control" formControlName="email">
+                    <mat-error *ngIf="messageForm.controls.email.hasError('required')">
+                        This field is required
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <label>Phone:</label>
+                    <input matInput type="number" class="form-control" formControlName="phone">
+                    <mat-error *ngIf="messageForm.controls.phone.hasError('required')">
+                        This field is required
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <label>Subject:</label>
+                    <input matInput type="text" class="form-control" formControlName="subject">
+                    <mat-error *ngIf="messageForm.controls.subject.hasError('required')">
+                        This field is required
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <label>Message:</label>
+                    <textarea matNativeControl type="text" class="form-control" formControlName="message" cols="100" rows="5"> </textarea>
+                    <mat-error *ngIf="messageForm.controls.message.hasError('required')">
+                        This field is required
+                    </mat-error>
+                    <mat-error *ngIf="messageForm.controls.message.hasError('minlength')">
+                        This field must contain at least 10 characters
+                    </mat-error>
+                    <mat-error *ngIf="messageForm.controls.message.hasError('maxlength')">
+                        This field must contain at least 200
+                    </mat-error>
+                </mat-form-field>
+
+            </mat-card-content>
+        </form>
+    </mat-card>
+</div> -->
+
+<html>
+
+<body>
+    <br>
+
+    <mat-card-header>
+        <mat-card-title class="header">Received messages</mat-card-title>
+    </mat-card-header> <br>
+
+    <div class="box">
+        <div class="full-width">
+            <label class="lbl">First name:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div><br>
+
+        <div class="full-width">
+            <label class="lbl">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div><br>
+
+        <div class="full-width">
+            <label class="lbl">Phone:</label>
+            <input type="number" class="form-control" id="phone" name="phone">
+        </div><br>
+
+        <div class="full-width">
+            <label class="lbl">Subject:</label>
+            <input type="text" class="form-control" id="subject" name="subject" required>
+        </div><br>
+
+        <div class="full-width">
+            <label class="lbl">Message:</label>
+            <textarea class="form-native" id="message" name="message" rows="15" required></textarea>
+        </div>
+    </div>
+</body>
+
+</html>

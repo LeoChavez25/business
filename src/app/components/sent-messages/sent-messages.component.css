@@ -1,0 +1,52 @@
+.box {
+    color: #1e326b;
+}
+
+.lbl {
+    padding-left: 260px;
+    color: #1e326b;
+}
+
+.form-control {
+    /*UserID,ReceivedMessageID,Subject*/
+    height: 18px;
+    width: 600px;
+}
+
+.form-control2 {
+    position: absolute;
+    top: 100px;
+    height: 18px;
+    width: 600px;
+}
+
+.form-native {
+    /*Messages box*/
+    width: 550px;
+    position: absolute;
+    left: 385px;
+    top: 208px;
+}
+
+.full-width {
+    width: 80%;
+    padding-left: 20px;
+}
+
+.header {
+    position: absolute;
+    right: 25px;
+    color: #1e326b;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    padding: 5px;
+}
+
+textarea {
+    padding-left: 50px;
+    width: 600px;
+}

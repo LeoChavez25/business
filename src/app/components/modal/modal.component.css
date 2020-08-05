@@ -1,0 +1,36 @@
+#modal-content-wrapper {
+    color: #1e326b;
+}
+
+#modal-body {
+    position: absolute;
+    margin-left: 20px;
+    color: #1e326b;
+}
+
+#modal-title {
+    font-size: 22px;
+    margin-left: 18px;
+}
+
+#modal-footer {
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 97px;
+}
+
+#modal-action-button {
+    margin-right: 5px;
+    background-color: #1e326b;
+    color: #fff;
+}
+
+#modal-cancel-button {
+    background-color: #1e326b;
+    color: #fff;
+}
+
+.p {
+    position: absolute;
+    margin-left: 65px;
+}

@@ -1,0 +1,63 @@
+<div class="user-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>Edit user</mat-card-title>
+        </mat-card-header>
+        <form class="edit-user-form" [formGroup]="userForm">
+            <mat-card-content>
+
+                <mat-form-field class="full-width">
+                    <input matInput type="text" placeholder="Name" formControlName="name">
+                    <mat-error *ngIf="userForm.controls.name.hasError('required')">
+                        This field is required
+                    </mat-error>
+                    <mat-error *ngIf="userForm.controls.name.hasError('minlength')">
+                        This field must contain at least 4 characters
+                    </mat-error>
+                    <mat-error *ngIf="userForm.controls.name.hasError('maxlength')">
+                        This field must contain at least 12 characters
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput type="text" placeholder="Lastname" formControlName="lastname">
+                    <mat-error *ngIf="userForm.controls.lastname.hasError('required')">
+                        This field is required
+                    </mat-error>
+                    <mat-error *ngIf="userForm.controls.lastname.hasError('minlength')">
+                        This field must contain at least 4 characters
+                    </mat-error>
+                    <mat-error *ngIf="userForm.controls.lastname.hasError('maxlength')">
+                        This field must contain at least 12 characters
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput type="password" placeholder="Password" formControlName="password">
+                    <mat-error *ngIf="userForm.controls.password.hasError('required')">
+                        This field is required
+                    </mat-error>
+                    <mat-error *ngIf="userForm.controls.password.hasError('minlength')">
+                        This field must contain at least 6 characters
+                    </mat-error>
+                    <mat-error *ngIf="userForm.controls.password.hasError('maxlength')">
+                        This field must contain at least 10 characters
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <mat-label>Choose a Role</mat-label>
+                    <mat-select [(value)]="selected" name="role">
+                        <mat-option [(value)]="role" *ngFor="let role of roles">
+                            {{ role }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+            </mat-card-content>
+            <button mat-stroked-button color="primary" (click)="updateUser()" routerLink="../users-list" class="btn-block">Save Changes</button>
+            <button mat-stroked-button color="primary" (click)="closeModal()" class="btn-block">Cancel</button>
+
+        </form>
+    </mat-card>
+</div>
