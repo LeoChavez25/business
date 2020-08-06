@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
+import { BehaviorSubject } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-modal',
@@ -8,7 +10,12 @@ import { MatDialogRef } from '@angular/material';
 })
 export class ModalComponent implements OnInit {
 
-  constructor(public dialogRef: MatDialogRef<ModalComponent>) { }
+  private loggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+
+  constructor(
+    private router: Router,
+    public dialogRef: MatDialogRef<ModalComponent>
+    ) { }
 
   ngOnInit() {
   }
@@ -20,6 +27,11 @@ export class ModalComponent implements OnInit {
 
   closeModal() {
     this.dialogRef.close();
+  }
+
+  logout() {
+    this.loggedIn.next(false);
+    this.router.navigate(['/login']);
   }
 
 }

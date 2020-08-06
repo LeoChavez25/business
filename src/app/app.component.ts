@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 import { ModalComponent } from './components/modal/modal.component';
+import { Router, NavigationStart } from '@angular/router';
+import { LogInComponent } from './components/log-in/log-in.component';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +12,19 @@ import { ModalComponent } from './components/modal/modal.component';
 export class AppComponent {
   title = 'business';
 
-  constructor(public matDialog: MatDialog) { }
+  constructor(
+    public matDialog: MatDialog,
+  ){}
+    // router:Router
+    // ) {
+    // router.events.forEach((event) => {
+    //     if(event instanceof NavigationStart) {
+    //         this.isLogin = event.url === "/login";
+    //     }
+    //   });
+    // }
+
+    // isLogin = false;
 
   openModal() {
     const dialogConfig = new MatDialogConfig();

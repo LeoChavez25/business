@@ -1,7 +1,7 @@
 <div class="user-wrapper" fxLayout="row" fxLayoutAlign="center center">
     <mat-card class="box">
         <mat-card-header>
-            <mat-card-title>New user</mat-card-title>
+            <mat-card-title class="title">New user</mat-card-title>
         </mat-card-header>
         <form class="new-user-form" [formGroup]="userForm">
             <mat-card-content>
@@ -55,7 +55,7 @@
                 </mat-form-field>
 
             </mat-card-content>
-            <button mat-stroked-button (click)="addUser()" color="primary" class="btn-block">Add User</button>
+            <button mat-stroked-button (click)="addUser()" class="btn-block">Add User</button>
         </form>
     </mat-card>
 </div>
